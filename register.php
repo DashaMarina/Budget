@@ -13,7 +13,7 @@ if($_POST){
 <div class="container mt-5" style="max-width:400px">
     <div class="card">
         <div class="card-body">
-            <h3 class="text-center">📝  Регистрация</h3>
+            <h3 class="text-center">  Регистрация</h3>
             <form method="POST">
                 <input type="text" name="name" class="form-control mb-2" placeholder="Имя" required>
                 <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>

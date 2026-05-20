@@ -65,10 +65,10 @@ $expense_total = totalExpense($pdo);
     <!-- Навигационные кнопки -->
     <div class="nav-buttons">
         
-        <a href="history.php" class="btn btn-info">📜  История</a>
-        <a href="statistics.php" class="btn btn-success">📊  Статистика</a>
-        <a href="tips.php" class="btn btn-info">📕  Советы</a>
-        <a href="logout.php" class="btn btn-danger">🚪  Выход</a>
+        <a href="history.php" class="btn btn-info">  История</a>
+        <a href="statistics.php" class="btn btn-success">  Статистика</a>
+        <a href="tips.php" class="btn btn-info">  Советы</a>
+        <a href="logout.php" class="btn btn-danger">  Выход</a>
     </div>
 
     <?php if(isset($_SESSION['congrats'])): ?>
@@ -77,9 +77,9 @@ $expense_total = totalExpense($pdo);
     <?php endif; ?>
     
     <div class="row mb-3">
-        <div class="col-md-3 alert alert-success">💰 Доходы: <?= number_format($income_total, 0) ?> ₽</div>
-        <div class="col-md-3 alert alert-danger">💸  Расходы: <?= number_format($expense_total, 0) ?> ₽</div>
-        <div class="col-md-3 alert alert-info">💳 Остаток: <?= number_format($income_total - $expense_total, 0) ?> ₽</div>
+        <div class="col-md-3 alert alert-success"> Доходы: <?= number_format($income_total, 0) ?> ₽</div>
+        <div class="col-md-3 alert alert-danger">  Расходы: <?= number_format($expense_total, 0) ?> ₽</div>
+        <div class="col-md-3 alert alert-info"> Остаток: <?= number_format($income_total - $expense_total, 0) ?> ₽</div>
         <div class="col-md-3 text-end"></div>
     </div>
     

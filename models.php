@@ -26,11 +26,17 @@ function lastIncomes($pdo) {
 }
 
 function lastExpenses($pdo) {
-    return $pdo->query("SELECT t.*, c.name as category, u.name as user FROM transactions t LEFT JOIN categories c ON t.category_id=c.id LEFT JOIN users u ON t.user_id=u.id WHERE t.type='expense' ORDER BY t.transaction_date DESC LIMIT 5")->fetchAll();
+    return $pdo->query("SELECT t.*, c.name as category, u.name as user 
+    FROM transactions t 
+    LEFT JOIN categories c ON t.category_id=c.id 
+    LEFT JOIN users u ON t.user_id=u.id 
+    WHERE t.type='expense' ORDER BY t.transaction_date DESC LIMIT 5")->fetchAll();
 }
 
 function allGoals($pdo) {
-    return $pdo->query("SELECT g.*, u.name as user FROM goals g JOIN users u ON g.user_id=u.id")->fetchAll();
+    return $pdo->query("SELECT g.*, u.name as user 
+    FROM goals g 
+    JOIN users u ON g.user_id=u.id")->fetchAll();
 }
 
 function addGoal($pdo, $user, $name, $amount) {

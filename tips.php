@@ -15,7 +15,7 @@ $tips=[
 <div class="container mt-3">
     <a href="index.php" class="btn btn-sm btn-secondary mb-2">← Назад</a>
     <div class="card">
-        <div class="card-header">💡  Советы по бюджету</div>
+        <div class="card-header">  Советы по бюджету</div>
         <div class="card-body">
             <?foreach($tips as $t){echo"<div class='alert alert-info'><b>{$t[0]}</b><br>{$t[1]}</div>";}?>
         </div>

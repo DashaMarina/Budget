@@ -16,16 +16,16 @@ if($_POST && isset($_POST['edit_id'])) {
 }
 $trans = $pdo->query("
     SELECT t.*, u.name
- as user, IF(t.type='income', s.name
+as user, IF(t.type='income', s.name
 , c.name
 ) as cat 
     FROM transactions t 
     LEFT JOIN users u ON t.user_id = u.id
- 
+
     LEFT JOIN sources s ON t.source_id = s.id
- 
+
     LEFT JOIN categories c ON t.category_id = c.id
- 
+
     ORDER BY t.transaction_date DESC
 ")->fetchAll();
 $editItem = null;
@@ -46,7 +46,7 @@ rel="stylesheet">
 <div class="container mt-3">
     <a href="index.php" class="btn btn-secondary mb-2">← Назад</a>
     <div class="card">
-        <div class="card-header">📜 История</div>
+        <div class="card-header"> История</div>
         <div class="card-body p-0">
             <table class="table table-sm mb-0">
                 <thead class="table-light">
@@ -57,7 +57,7 @@ rel="stylesheet">
                     <tr>
                         <td><?= $t['transaction_date'] ?></td>
                         <td><?= $t['user'] ?></td>
-                        <td><?= $t['type'] == 'income' ? '💰 Доход' : '💸 Расход' ?></td>
+                        <td><?= $t['type'] == 'income' ? ' Доход' : ' Расход' ?></td>
                         <td><?= $t['cat'] ?></td>
                         <td><?= number_format($t['amount'], 0) ?> ₽</td>
                         <td>

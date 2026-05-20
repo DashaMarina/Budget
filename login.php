@@ -23,7 +23,7 @@ if($_POST) {
 <div class="container mt-5" style="max-width:400px">
     <div class="card">
         <div class="card-body">
-            <h3 class="text-center">💰 Вход</h3>
+            <h3 class="text-center"> Вход</h3>
             <form method="POST">
                 <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
                 <input type="password" name="password" class="form-control mb-2" placeholder="Пароль" required>
